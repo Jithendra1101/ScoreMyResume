@@ -1,5 +1,5 @@
 import type { Route } from "./+types/home";
-import Navbar from "~/components/navbar";
+import Navbar from "~/components/Navbar";
 
 export function meta({}: Route.MetaArgs) {
   return [
@@ -17,6 +17,9 @@ export default function Home() {
     <h1>Apply smart. Track better. Win faster.</h1>
     <h2>Get smart insights on your resume, powered by AI</h2>
   </div>
+
   </section>
-  </main>);
+
+
+    </main>);
 }

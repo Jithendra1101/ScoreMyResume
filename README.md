@@ -1,87 +1,183 @@
-# Welcome to React Router!
+# ScoreMyResume
 
-A modern, production-ready template for building full-stack React applications using React Router.
+[![Portfolio](https://img.shields.io/badge/Portfolio-Visit-blue?style=flat-square&logo=github)](https://jithendra.in/)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-blue?style=flat-square&logo=linkedin)](https://www.linkedin.com/in/jithendra11/)
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/remix-run/react-router-templates/tree/main/default)
+---
 
-## Features
+## 🚀 Overview
 
-- 🚀 Server-side rendering
-- ⚡️ Hot Module Replacement (HMR)
-- 📦 Asset bundling and optimization
-- 🔄 Data loading and mutations
-- 🔒 TypeScript by default
-- 🎉 TailwindCSS for styling
-- 📖 [React Router docs](https://reactrouter.com/)
+**ScoreMyResume** is a modern, AI-powered web application that analyzes your resume against any job description and provides an ATS (Applicant Tracking System) compatibility score. Instantly see how well your resume aligns and get actionable insights to improve your chances of getting noticed by recruiters.
 
-## Getting Started
+---
+
+## 🖼️ Screenshots
+
+<div align="center">
+  <h3>🏠 Homepage</h3>
+  <img src="public/readme/homepage.png" alt="Homepage" width="700"/>
+  <br/>
+  <h3>📤 Upload Resume</h3>
+   <p>The page where users can upload their resumes for ATS scoring and analysis.</p>
+  <img src="public/readme/uploadpage.png" alt="Upload Resume" width="700"/>
+  <br/>
+  <h3>📊 Analysis Result</h3>
+  <p>Displays the ATS score and a detailed breakdown of the resume analysis.</p>
+  <img src="public/readme/result_atsscore.png" alt="Analysis Result" width="700"/>
+</div>
+
+---
+
+## 🛠️ Tech Stack
+
+-------------------------------------------------------------------
+| Layer         | Technology                                      |
+|---------------|-------------------------------------------------|
+| Frontend      | React, TypeScript, Tailwind CSS, React Router   |
+| State         | Zustand                                         |
+| Cloud/Backend | Puter.js (file storage, AI, key-value, auth)    |
+| AI Model      | Claude Sonnet 4                                 |
+| PDF Handling  | PDF.js                                          |
+| Utilities     | clsx, tailwind-merge                            |
+-------------------------------------------------------------------
+
+## 📂 File Structure
+
+```
+app/
+│
+├── app.css
+├── root.tsx
+├── routes.ts
+│
+├── components/
+│   ├── Accordion.tsx
+│   ├── ATS.tsx
+│   ├── Details.tsx
+│   ├── FileUploader.tsx
+│   ├── Footer.tsx
+│   ├── Navbar.tsx
+│   ├── ResumeCard.tsx
+│   ├── ScoreBadge.tsx
+│   ├── ScoreCircle.tsx
+│   ├── ScoreGauge.tsx
+│   └── Summary.tsx
+│
+├── lib/
+│   ├── pdf2img.ts
+│   ├── puter.ts
+│   └── utils.ts
+│
+└── routes/
+    ├── auth.tsx
+    ├── home.tsx
+    ├── resume.tsx
+    ├── upload.tsx
+    └── wipe.tsx
+
+public/
+└── readme/
+    ├── screenshot1.png
+    ├── screenshot2.png
+    └── screenshot3.png
+```
+
+---
+
+## ⚡ Getting Started
+
+### Prerequisites
+
+- Node.js (v18+ recommended)
+- Yarn or npm
 
 ### Installation
 
-Install the dependencies:
-
 ```bash
+git clone https://github.com/yourusername/ScoreMyResume.git
+cd ScoreMyResume
 npm install
 ```
 
-### Development
-
-Start the development server with HMR:
+### Running Locally
 
 ```bash
 npm run dev
 ```
 
-Your application will be available at `http://localhost:5173`.
-
-## Building for Production
-
-Create a production build:
-
-```bash
-npm run build
-```
-
-## Deployment
-
-### Docker Deployment
-
-To build and run using Docker:
-
-```bash
-docker build -t my-app .
-
-# Run the container
-docker run -p 3000:3000 my-app
-```
-
-The containerized application can be deployed to any platform that supports Docker, including:
-
-- AWS ECS
-- Google Cloud Run
-- Azure Container Apps
-- Digital Ocean App Platform
-- Fly.io
-- Railway
-
-### DIY Deployment
-
-If you're familiar with deploying Node applications, the built-in app server is production-ready.
-
-Make sure to deploy the output of `npm run build`
-
-```
-├── package.json
-├── package-lock.json (or pnpm-lock.yaml, or bun.lockb)
-├── build/
-│   ├── client/    # Static assets
-│   └── server/    # Server-side code
-```
-
-## Styling
-
-This template comes with [Tailwind CSS](https://tailwindcss.com/) already configured for a simple default starting experience. You can use whatever CSS framework you prefer.
+Visit [http://localhost:5173](http://localhost:5173) in your browser.
 
 ---
 
-Built with ❤️ using React Router.
+## 📝 Usage
+
+1. **Sign In:** Authenticate via Puter.js.
+2. **Upload Resume:** Drop your PDF resume file.
+3. **Enter Job Details:** Fill in the company name, job title, and job description.
+4. **Analyze:** Click to get your ATS score and improvement tips.
+5. **Review Results:** See detailed feedback and actionable suggestions.
+
+---
+
+## 🤖 How It Works
+
+- **Upload:** Resume is uploaded and converted to an image for preview.
+- **AI Analysis:** Resume and job details are sent to Claude Sonnet 4 via Puter.js for analysis.
+- **Feedback:** AI returns a structured JSON with ATS score and category breakdowns.
+- **Display:** Results are visualized and stored for future reference.
+
+---
+
+## 📦 Deployment
+
+- **Frontend:** Deploy on Vercel, Netlify, or your preferred static hosting.
+- **Backend/AI:** Handled by Puter.js cloud services.
+
+---
+
+## 🙋 FAQ
+
+**Q: What file types are supported?**  
+A: Currently, only PDF resumes are supported for analysis.
+
+**Q: Is my data secure?**  
+A: Yes, all files and analysis results are securely stored via Puter.js and are only accessible to the authenticated user.
+
+**Q: Can I analyze multiple resumes?**  
+A: Yes, you can upload and analyze as many resumes as you like.
+
+**Q: How accurate is the ATS score?**  
+A: The score is generated by Claude Sonnet 4 AI based on your resume and the job description. It provides a strong indication of ATS compatibility, but results may vary depending on the job and resume content.
+
+**Q: Can I use this for any job description?**  
+A: Yes, you can paste any job description to get tailored feedback for your resume.
+
+**Q: What happens to my data after analysis?**  
+A: Your data is stored securely and can be deleted at any time by the user.
+
+**Q: Who built this project?**  
+A: This project was built by Jithendra Reddy. See contact details below.
+
+---
+
+## 🧑‍💻 Contributing
+
+Contributions are welcome! Please open issues or submit pull requests for improvements or bug fixes.
+
+---
+
+## 📄 License
+
+MIT License
+
+---
+
+## 📫 Contact
+
+- **Portfolio:** [jithendra.in](https://jithendra.in)
+- **LinkedIn:** [linkedin.com/in/jithendra11/](https://www.linkedin.com/in/jithendra11/)
+- **Email:** [gjithendravarma@gmail.com](mailto:gjithendravarma@gmail.com)
+
+---
+
+> _Made with ❤️ by Jithendra Varma

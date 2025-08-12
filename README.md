@@ -89,7 +89,7 @@ app/
 ### Installation
 
 ```bash
-git clone https://github.com/yourusername/ScoreMyResume.git
+git clone https://github.com/Jithendra1101/ScoreMyResume.git
 cd ScoreMyResume
 npm install
 ```

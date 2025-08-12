@@ -151,7 +151,7 @@ A: Yes, you can paste any job description to get tailored feedback for your resu
 A: Your data is stored securely and can be deleted at any time by the user.
 
 **Q: Who built this project?**  
-A: This project was built by Jithendra Reddy. See contact details below.
+A: This project was built by Jithendra Varma. See contact details below.
 
 ---
 

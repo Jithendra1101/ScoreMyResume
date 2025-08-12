@@ -1,6 +1,7 @@
 import {usePuterStore} from "~/lib/puter";
 import {useEffect} from "react";
 import {useLocation, useNavigate} from "react-router";
+import Footer from "~/components/Footer";
 
 export const meta = () => ([
     { title: 'ScoreMyResume | Auth' },
@@ -46,6 +47,7 @@ const Auth = () => {
                     </div>
                 </section>
             </div>
+            
         </main>
     )
 }

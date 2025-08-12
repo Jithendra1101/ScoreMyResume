@@ -6,6 +6,7 @@ import {useNavigate} from "react-router";
 import {convertPdfToImage} from "~/lib/pdf2img";
 import {generateUUID} from "~/lib/utils";
 import {prepareInstructions} from "../../constants";
+import Footer from '~/components/Footer';
 
 export const meta = () => [
     { title: 'ScoreMyResume | Upload' },
@@ -124,6 +125,7 @@ const Upload = () => {
                     )}
                 </div>
             </section>
+            <Footer />
         </main>
     )
 }

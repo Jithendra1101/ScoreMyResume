@@ -9,7 +9,7 @@
 
 **ScoreMyResume** is a modern, AI-powered web application that analyzes your resume against any job description and provides an ATS (Applicant Tracking System) compatibility score. Instantly see how well your resume aligns and get actionable insights to improve your chances of getting noticed by recruiters.
 
----
+🔗 **Live Demo:** [scoremyresume.jithendra.in](https://scoremyresume.jithendra.in)
 
 ## 🖼️ Screenshots
 
@@ -75,12 +75,7 @@ app/
     ├── upload.tsx
     └── wipe.tsx
 
-public/
-└── readme/
-    ├── screenshot1.png
-    ├── screenshot2.png
-    └── screenshot3.png
-```
+
 
 ---
 
@@ -130,7 +125,7 @@ Visit [http://localhost:5173](http://localhost:5173) in your browser.
 
 ## 📦 Deployment
 
-- **Frontend:** Deploy on Vercel, Netlify, or your preferred static hosting.
+- **Frontend:** I had Deployed it on Vercel.you can choose Vercel, Netlify, or your preferred static hosting.
 - **Backend/AI:** Handled by Puter.js cloud services.
 
 ---
@@ -160,11 +155,6 @@ A: This project was built by Jithendra Reddy. See contact details below.
 
 ---
 
-## 🧑‍💻 Contributing
-
-Contributions are welcome! Please open issues or submit pull requests for improvements or bug fixes.
-
----
 
 ## 📄 License
 
@@ -180,4 +170,4 @@ MIT License
 
 ---
 
-> _Made with ❤️ by Jithendra Varma
+> Made with ❤️ by Jithendra Varma

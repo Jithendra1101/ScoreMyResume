@@ -4,6 +4,7 @@ import {usePuterStore} from "~/lib/puter";
 import Summary from "~/components/Summary";
 import ATS from "~/components/ATS";
 import Details from "~/components/Details";
+import Footer from "~/components/Footer";
 
 export const meta = () => ([
     { title: 'ScoreMyResume | Review ' },
@@ -84,6 +85,7 @@ const Resume = () => {
                     )}
                 </section>
             </div>
+            <Footer/>
         </main>
     )
 }
